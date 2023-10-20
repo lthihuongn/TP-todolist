@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lilou.boutibonnes/OneDrive - JUNIA Grande école d'ingénieurs/Documents/CIR1/Programmation/GitHub/C/TP_todolist
+# Install script for directory: C:/Users/lilou.boutibonnes/OneDrive - JUNIA Grande école d'ingénieurs/Documents/GitHub/C/TP-todolist
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/lilou.boutibonnes/OneDrive - JUNIA Grande école d'ingénieurs/Documents/CIR1/Programmation/GitHub/C/TP_todolist/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/lilou.boutibonnes/OneDrive - JUNIA Grande école d'ingénieurs/Documents/GitHub/C/TP-todolist/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

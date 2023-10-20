@@ -19,8 +19,9 @@ Tache tacheinfo(){
 }
 
 
-void finir_tache(){
+char* finir_tache(){
     strcpy(newtache.statut, "done");
+    return newtache.statut;
 }
 
 
@@ -30,7 +31,7 @@ int main() {
 
     char reponse;
     printf("Bienvenu dans votre TO DO list, que voulez vous faire ?");
-    printf("+ (creer une nouvelle tache, c consulter vos taches, t consulter vos taches terminees, e consuleter vos taches en cours.");
+    printf("+ (creer une nouvelle tache, c consulter vos taches, t consulter vos taches terminees, e consuleter vos taches en cours, f finir une tache.");
     scanf("%c", &reponse);
     if (reponse == '+'){
         char contenu[100];
@@ -64,6 +65,14 @@ int main() {
         }
     }
 
+    if (reponse == 'f'){
+        int i;
+        printf("donnez l'indice de la tache à finir");
+        scanf("%d", i);
+        liste[i].statut = finir_tache();
+
+    }
+
 
 
 
@@ -79,16 +88,5 @@ int main() {
     }
 
 
-
-
-
     return 0;
 }
-
-//if (strcmp("done", liste.statut) == 0){
- //   printf("jsp")
-//}
-
-//if (strcmp("en cours", liste.statut) == 0){
-//   printf("jsp")
-//}
