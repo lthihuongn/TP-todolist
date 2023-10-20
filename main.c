@@ -43,13 +43,13 @@ int main() {
             liste[i] = tache;
         }
     }
-    if (reponse == 'c'){
+    else if (reponse == 'c'){
         for (int i = 0; i < strlen(liste); ++i) {
             printf("%s", liste[i].contenu);
         }
     }
 
-    if (reponse == 't'){
+    else if (reponse == 't'){
         for (int i = 0; i < strlen(liste); ++i) {
             if (liste[i].statut == "done"){
                 printf("%s", liste[i].contenu);
@@ -57,7 +57,7 @@ int main() {
         }
     }
 
-    if (reponse == 'e'){
+    else if (reponse == 'e'){
         for (int i = 0; i < strlen(liste); ++i) {
             if (liste[i].statut == "en cours"){
                 printf("%s", liste[i].contenu);
@@ -65,26 +65,16 @@ int main() {
         }
     }
 
-    if (reponse == 'f'){
+    else if (reponse == 'f'){
         int i;
         printf("donnez l'indice de la tache à finir");
         scanf("%d", i);
         liste[i].statut = finir_tache();
 
     }
-
-
-
-
-    //finir_tache(tache2);
-
-    for (int i = 0; i < strlen(liste); ++i) {
-        if (strcmp("en cours", liste[i].statut) == 0){
-            printf("a faire : %s", liste[i].contenu);
-        }
-        if (strcmp("done", liste[i].statut) == 0){
-            printf("taches terminees : %s", liste[i].contenu);
-        }
+    else {
+        printf("entrez uen commande valise");
+        scanf("%c", reponse);
     }
 
 
