@@ -18,7 +18,6 @@ Tache tacheinfo(){
         return newtache;
 }
 
-
 void finir_tache(){
     strcpy(newtache.statut, "done");
 }
@@ -38,13 +37,17 @@ int main() {
         fgets(contenu, 100, stdin);
         creer_tache(contenu);
         Tache tache =tacheinfo();
-        for (int i = 0; i < strlen(liste); ++i) {
+        for (int i = 0; i < strlen(liste); ++i) { // c'est pas bon
             liste[i] = tache;
         }
     }
     else if (reponse == 'c'){
         for (int i = 0; i < strlen(liste); ++i) {
-            printf("%s", liste[i].contenu);
+            if (strlen(liste) == 0){
+                printf("liste vide");
+            }
+            else {printf("%s", liste[i].contenu);
+            }
         }
     }
 
