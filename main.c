@@ -42,11 +42,11 @@ int main() {
         }
     }
     else if (reponse == 'c'){
-        for (int i = 0; i < strlen(liste); ++i) {
-            if (strlen(liste) == 0){
-                printf("liste vide");
-            }
-            else {printf("%s", liste[i].contenu);
+        if (strlen(liste) == 0){
+            printf("liste vide");}
+        else {
+            for (int i = 0; i < strlen(liste); ++i) {
+                printf("%s", liste[i].contenu);
             }
         }
     }
