@@ -19,9 +19,8 @@ Tache tacheinfo(){
 }
 
 
-char* finir_tache(){
+void finir_tache(){
     strcpy(newtache.statut, "done");
-    return newtache.statut;
 }
 
 
@@ -35,7 +34,7 @@ int main() {
     scanf("%c", &reponse);
     if (reponse == '+'){
         char contenu[100];
-        printf("veuillez entrer le contenu de votre tache");
+        printf("veuillez entrer le contenu de votre tache\n");
         fgets(contenu, 100, stdin);
         creer_tache(contenu);
         Tache tache =tacheinfo();
@@ -69,7 +68,7 @@ int main() {
         int i;
         printf("donnez l'indice de la tache à finir");
         scanf("%d", i);
-        liste[i].statut = finir_tache();
+        finir_tache();
 
     }
     else {
